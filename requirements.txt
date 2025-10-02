@@ -1,0 +1,8 @@
+# Core dependencies
+# (Tkinter ships with Python, no extra packages required)
+
+# Development dependencies
+pytest>=8.0.0
+ruff>=0.5.0
+black>=24.0
+build>=1.2.1

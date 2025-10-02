@@ -1,0 +1,48 @@
+[project]
+name = "dice-roller"
+version = "0.1.0"
+description = "A Tkinter Dice Rolling Simulator with CLI and testable core logic."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Mobin Yousefi", email = "mobin.roj@gmail.com" }
+]
+keywords = ["dice", "tkinter", "gui", "simulator", "games"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Environment :: Win32 (MS Windows)",
+  "Environment :: MacOS X",
+  "Environment :: X11 Applications :: GTK"
+]
+
+[project.urls]
+Homepage = "https://github.com/mobinyousefi-cs/dice-roller"
+
+[project.scripts]
+dice-roller = "dice_roller.main:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "ruff>=0.5.0", "black>=24.0", "build>=1.2.1"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311", "py312", "py313"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "B", "UP"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
